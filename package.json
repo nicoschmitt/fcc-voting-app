@@ -1,0 +1,12 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "description": "FCC Voting App",
+  "main": "server.js",
+  "repository": "",
+  "author": "Nicolas Schmitt",
+  "dependencies": {
+    "express": "~4.13.4",
+    "node-sass-middleware": "~0.9.7",
+  }
+}

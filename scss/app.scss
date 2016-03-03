@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$black: #333;
+$white: #ccc;
+
+html {
+  background-color: $black;
+};
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Open Sans;
+  background-color: $black;
+};
+
+.navbar {
+  margin-bottom: 20px;
+};
+
+.navbar-default .navbar-brand, .jumbotron {
+  color: $black;
+};
+
+
+/* Custom default button */
+.btn-default, .btn-default:hover, .btn-default:focus {
+  color: #333;
+  background-color: $black;
+  border: 1px solid $black;
+};
+
