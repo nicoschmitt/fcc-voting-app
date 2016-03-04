@@ -22,11 +22,17 @@ body {
   color: $black;
 };
 
+.ng-dirty.ng-invalid {
+  border-color: red;
+}
 
-/* Custom default button */
-.btn-default, .btn-default:hover, .btn-default:focus {
-  color: #333;
-  background-color: $black;
-  border: 1px solid $black;
-};
+.pointer {
+  cursor: pointer;
+}
 
+.top-right {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 20%;
+}

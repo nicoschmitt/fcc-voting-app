@@ -1,0 +1,7 @@
+<h2>Choose a poll to vote</h2>
+<div class="list-group" ng-show="vm.polls.length">
+    <a ng-repeat="poll in vm.polls" class="list-group-item" href="#/Poll/{{poll._id}}">{{poll.title}}</a>
+</div>
+<div ng-hide="vm.polls.length">
+    <p>No polls available.</p>
+</div>

@@ -3,9 +3,7 @@
   var app = angular.module('votingApp');
   
   app.directive("topNav", ['adalAuthenticationService', "$location",
-    function (adalProvider, location) {
-        
-        console.log(adalProvider);
+    function (adalProvider, $location) {
         
         var topNavCtrl = function() {
           var vm = this;
@@ -22,6 +20,9 @@
               return adalProvider.userInfo.profile.name;
           };
                
+          vm.isActive = function (viewLocation) { 
+            return viewLocation === $location.path();
+          };
         };
         
         

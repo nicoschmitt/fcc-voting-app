@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" bs-navbar>
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,19 +11,18 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li data-match-route="/Polls"><a href="#/Polls">Home</a></li>
+        <li data-match-route="/New" ng-show="userInfo.isAuthenticated"><a href="#/New">New Poll</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a class="btn btn-link" ng-hide="userInfo.isAuthenticated" ng-click="nav.login()">Login</a></li>
         <li class="dropdown" ng-show="userInfo.isAuthenticated">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{nav.getUsername()}} <span class="caret"></span></a>
+          <a class="pointer" class="dropdown-toggle" bs-dropdown data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> {{nav.getUsername()}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a ng-click="nav.login()">Logout</a></li>
+            <li><a class="pointer" ng-click="nav.login()">Logout</a></li>
           </ul>
         </li>
       </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container-fluid -->
+    </div>
+  </div>
 </nav>

@@ -1,0 +1,15 @@
+<div ng-show="vm.loading">loading...</div>
+
+<div class="container-fluid" ng-hide="vm.loading">
+  <h2>{{vm.poll.title}}</h2>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="list-group">
+          <a ng-repeat="option in vm.poll.results" class="list-group-item">{{ option[0] }}</a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      
+    </div>
+  </div>
+</div>
