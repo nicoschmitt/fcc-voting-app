@@ -36,3 +36,16 @@ body {
   right: 50px;
   width: 20%;
 }
+
+#message {
+  margin-top: 30px;
+} 
+
+.add-option {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  
+  a, a:hover, a:active {
+    text-decoration: none;
+  }
+}

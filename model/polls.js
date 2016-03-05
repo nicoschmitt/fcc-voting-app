@@ -12,8 +12,8 @@
         ownerName: String,
         ownerEmail: String,
         title: String,
-        results: [],
-        voters: [String]
+        options: [String],
+        votes: []
     }));
         
     module.exports = Poll;

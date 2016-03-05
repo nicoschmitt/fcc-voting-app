@@ -1,0 +1,13 @@
+<div ng-show="vm.message">{{vm.message}}</div>
+
+<div class="container-fluid" ng-hide="vm.message">
+
+    <h2>My polls</h2>
+    <div class="list-group" ng-show="vm.polls.length">
+        <a ng-repeat="poll in vm.polls" class="list-group-item" href="#/Poll/{{poll._id}}">{{poll.title}}</a>
+    </div>
+    <div ng-hide="vm.polls.length">
+        <p>No polls available. <a href="#/New">Create one now.</a></p>
+    </div>
+
+</div>

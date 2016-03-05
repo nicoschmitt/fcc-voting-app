@@ -17,7 +17,8 @@
           };
           
           vm.getUsername = function() {
-              return adalProvider.userInfo.profile.name;
+              var auth = adalProvider.userInfo.isAuthenticated;
+              return (auth && adalProvider.userInfo.profile.name) || "";
           };
                
           vm.isActive = function (viewLocation) { 

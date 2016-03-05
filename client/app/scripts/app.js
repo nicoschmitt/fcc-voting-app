@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('votingApp', [ 'ngRoute', 'AdalAngular', "ngAnimate", "mgcrea.ngStrap" ]);
+  var app = angular.module('votingApp', [ 'ngRoute', 'AdalAngular', "ngAnimate", "mgcrea.ngStrap", "chart.js" ]);
   
   app.config(['$routeProvider','$httpProvider', 'adalAuthenticationServiceProvider',
     function ($routeProvider, $httpProvider, adalProvider) {
@@ -9,12 +9,18 @@
         controller: "pollsListCtrl",
         controllerAs: "vm"
 
+      }).when("/My", {
+        templateUrl: "/app/views/my-polls.html",
+        controller: "myPollsCtrl",
+        controllerAs: "vm",
+        requireADLogin: true
+ 
       }).when("/New", {
         templateUrl: "/app/views/new-poll.html",
         controller: "newPollCtrl",
         controllerAs: "vm",
-        requireADLogin: true // Ensures that the user must be logged in to access the route
-  
+        requireADLogin: true
+        
       }).when("/Poll/:id", {
         controller: "pollCtrl",
         templateUrl: "/app/views/poll.html",

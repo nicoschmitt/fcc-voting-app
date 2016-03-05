@@ -26,7 +26,7 @@
                       container: "body",
                       placement: "top-right",
                       type: "danger",
-                      //duration: 2,
+                      duration: 2,
                       show: false
                     });
                   myalert.$promise.then(myalert.show);
